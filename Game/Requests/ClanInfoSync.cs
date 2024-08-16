@@ -1,0 +1,25 @@
+﻿using EmuWarface.Core;
+using EmuWarface.Game.Clans;
+using EmuWarface.Game.Enums;
+using EmuWarface.Game.GameRooms;
+using EmuWarface.Game.Missions;
+using EmuWarface.Xmpp;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Xml;
+
+namespace EmuWarface.Game.Requests
+{
+    public static class ClanInfoSync
+    {
+        [Query(IqType.Get, "clan_info_sync")]
+        public static void ClanInfoSyncSerializer(Client client, Iq iq)
+        {
+            if (client.Profile == null)
+                throw new InvalidOperationException();
+
+            Clan.ClanInfo(client.Profile.ClanId);
+        }
+    }
+}
