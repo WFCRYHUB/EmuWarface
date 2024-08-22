@@ -1,0 +1,8 @@
+{
+	"server": "127.0.0.1",
+	"user": "root",
+	"password": "",
+	"database": "emuwarface",
+	"characterSet": "utf8mb4",
+	"port": 3306
+}

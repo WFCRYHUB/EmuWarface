@@ -1,0 +1,362 @@
+[
+	{
+		"name": "pt05_shop",
+		"type": "Pistol",
+		"classes": 29
+	},
+	{
+		"name": "ar02_shop",
+		"type": "Primary",
+		"classes": 1
+	},
+	{
+		"name": "sr02_default",
+		"type": "Primary",
+		"classes": 4
+	},
+	{
+		"name": "smg04_shop",
+		"type": "Primary",
+		"classes": 16
+	},
+	{
+		"name": "shg01_default",
+		"type": "Primary",
+		"classes": 8
+	},
+	{
+		"name": "hmg01_shop",
+		"type": "Primary",
+		"classes": 2
+	},
+	{
+		"name": "kn01",
+		"type": "Knife",
+		"classes": 29
+	},
+	{
+		"name": "explosivegrenade",
+		"type": "PocketFragGrenade",
+		"classes": 29
+	},
+	{
+		"name": "claymoreexplosive",
+		"type": "PocketClaymore",
+		"classes": 16
+	},
+	{
+		"name": "mk01",
+		"type": "PocketKit",
+		"classes": 8
+	},
+	{
+		"name": "df01",
+		"type": "PocketSpecial",
+		"classes": 8
+	},
+	{
+		"name": "df05",
+		"type": "PocketSpecial",
+		"classes": 16
+	},
+	{
+		"name": "ap01",
+		"type": "PocketKit",
+		"classes": 1
+	},
+	{
+		"name": "ak01",
+		"type": "PocketKit",
+		"classes": 16
+	},
+	{
+		"name": "medic_helmet_08",
+		"type": "Helmet",
+		"classes": 8
+	},
+	{
+		"name": "medic_kneepads_02",
+		"type": "Legarmor",
+		"classes": 8
+	},
+	{
+		"name": "sniper_helmet_08",
+		"type": "Helmet",
+		"classes": 4
+	},
+	{
+		"name": "sniper_kneepads_02",
+		"type": "Legarmor",
+		"classes": 4
+	},
+	{
+		"name": "soldier_helmet_08",
+		"type": "Helmet",
+		"classes": 1
+	},
+	{
+		"name": "soldier_kneepads_02",
+		"type": "Legarmor",
+		"classes": 1
+	},
+	{
+		"name": "engineer_helmet_08",
+		"type": "Helmet",
+		"classes": 16
+	},
+	{
+		"name": "engineer_kneepads_02",
+		"type": "Legarmor",
+		"classes": 16
+	},
+	{
+		"name": "default_gunner_vest",
+		"type": "Vest",
+		"classes": 2
+	},
+	{
+		"name": "default_gunner_helmet",
+		"type": "Helmet",
+		"classes": 2
+	},
+	{
+		"name": "default_gunner_hands",
+		"type": "Gloves",
+		"classes": 2
+	},
+	{
+		"name": "default_gunner_shoes",
+		"type": "Boots",
+		"classes": 2
+	},
+	{
+		"name": "default_gunner_skin",
+		"type": "Skin",
+		"classes": 2
+	},
+	{
+		"name": "shared_hands_08",
+		"type": "Gloves",
+		"classes": 29
+	},
+	{
+		"name": "shared_pants_02",
+		"type": "Pants",
+		"classes": 29
+	},
+	{
+		"name": "shared_jacket_02",
+		"type": "Chest",
+		"classes": 29
+	},
+	{
+		"name": "shared_shoes_10",
+		"type": "Boots",
+		"classes": 29
+	},
+	{
+		"name": "shared_vest_13",
+		"type": "Vest",
+		"classes": 29
+	},
+	{
+		"name": "rds01",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "rds02",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "rds03",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "rds04",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "rds07",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "ss01",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "ss02",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "ss04",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "sc01",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "sc02",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "sc03",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "sc04",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "sc05",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "sc06",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "gp01",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "gp02",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "gp03",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "gpp01",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "gpp02",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "as01",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "as02",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "as03",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "as04",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "as05",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "as06",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "bp01",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "bp02",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "bp03",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "bn01",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "bn02",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "bn03",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "bn05",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "bn05",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "sp02",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "sp03",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "sp04",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "sp05",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "sp06",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "ps01",
+		"type": "Attachment",
+		"classes": 29
+	},
+	{
+		"name": "ugl01",
+		"type": "Attachment",
+		"classes": 29
+	}
+]

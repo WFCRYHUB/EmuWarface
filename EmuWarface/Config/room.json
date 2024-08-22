@@ -1,0 +1,8 @@
+{
+    "min_players_ready_pvp_public": 1,
+    "min_players_ready_pvp_autostart": 2,
+    "min_players_ready_pve_private": 1,
+    "min_players_ready_pve_autostart": 1,
+    "min_players_ready_pvp_clanwar": 1,
+    "min_players_ready_pvp_rating": 4
+}

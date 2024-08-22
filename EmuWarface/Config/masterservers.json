@@ -1,0 +1,38 @@
+[
+  {
+    "server_id": 1,
+    "resource": "pve_001",
+    "channel": "pve",
+    "rank_group": "all",
+    "min_rank": 1,
+    "max_rank": 90,
+    "bootstrap": ""
+  },
+  {
+    "server_id": 101,
+    "resource": "pvp_newbie_001",
+    "channel": "pvp_newbie",
+    "rank_group": "all",
+    "min_rank": 1,
+    "max_rank": 90,
+    "bootstrap": ""
+  },
+  {
+    "server_id": 201,
+    "resource": "pvp_skilled_001",
+    "channel": "pvp_skilled",
+    "rank_group": "all",
+    "min_rank": 1,
+    "max_rank": 90,
+    "bootstrap": ""
+  },
+  {
+    "server_id": 301,
+    "resource": "pvp_pro_001",
+    "channel": "pvp_pro",
+    "rank_group": "all",
+    "min_rank": 1,
+    "max_rank": 90,
+    "bootstrap": ""
+  }
+]
