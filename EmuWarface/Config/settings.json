@@ -1,10 +1,6 @@
 {
 	"host": "127.0.0.1",
 	"port": 5222,
-	"rconPort": 6001,
-	"rconAllowedHosts": [
-		"127.0.0.1"
-	],
 	"dedicatedHosts": [
 		"127.0.0.1"
 	],
@@ -13,5 +9,5 @@
 	"certSecret": "n1kodim",
 	"xmpp_debug": true,
 	"xmpp_debug_console": true,
-	"use_online_protect": true
+	"use_online_protect": false
 }

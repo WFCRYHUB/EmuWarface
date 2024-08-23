@@ -34,7 +34,7 @@ give user1 m cry 10000
 give user1 a 2231
 give user1 achiev 2231
 
-give user1 all
+give user1 all (DISABLE online_use_protect)
 ";
         public string[] Names => new[] { "give", "g" };
 
