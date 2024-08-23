@@ -5,7 +5,7 @@
 		"127.0.0.1"
 	],
 	"onlinePath": "online.txt",
-	"gameVersion": "1.15000.124.34300",
+	"gameVersion": "1.22400.5519.45100",
 	"certSecret": "n1kodim",
 	"xmpp_debug": true,
 	"xmpp_debug_console": true,
