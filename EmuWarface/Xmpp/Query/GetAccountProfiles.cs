@@ -14,7 +14,7 @@ namespace EmuWarface.Xmpp.Query
             var user_id = iq.Query.GetAttribute("user_id");
 
 #if !DEBUG
-            if (version != EmuConfig.Settings.GameVersion)
+            if (version != Config.Settings.GameVersion)
                 throw new QueryException(1);
 #endif
 

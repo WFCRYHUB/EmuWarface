@@ -41,7 +41,7 @@ namespace EmuWarface.Xmpp.Query
                 throw new InvalidOperationException();
 
 #if !DEBUG
-            if (version != EmuConfig.Settings.GameVersion)
+            if (version != Config.Settings.GameVersion)
                 throw new QueryException(JoinChannelError.VersionMismatch);
 #endif
 

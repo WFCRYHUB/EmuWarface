@@ -32,7 +32,7 @@ namespace EmuWarface.Xmpp.Query
                 throw new ServerException("profile not created");
 
 #if !DEBUG
-            if (version != EmuConfig.Settings.GameVersion)
+            if (version != Config.Settings.GameVersion)
                 throw new QueryException(JoinChannelError.VersionMismatch);
 #endif
             if (channel.MinRank > client.Profile.GetRank() || channel.MaxRank < client.Profile.GetRank())
