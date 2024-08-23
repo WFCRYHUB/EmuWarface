@@ -68,8 +68,8 @@ give user1 all (DISABLE online_use_protect)
                         {
                             string name = item.GetAttribute("name");
                             string max_buy_amount = item.GetAttribute("max_buy_amount");
-                            if (/*max_buy_amount == "1" &&*/
-                                !name.Contains("achiev") 
+                            if (max_buy_amount == "1"
+                                && !name.Contains("achiev") 
                                 && !name.Contains("box")
                                 && !name.Contains("bundle")
                                 && !name.Contains("unlock"))
@@ -77,7 +77,13 @@ give user1 all (DISABLE online_use_protect)
                                 var i = profile.GiveItem(item.GetAttribute("name"), ItemType.Basic);
                             }
                         }
-                        profile.ResyncProfie();
+
+                        Client client;
+                        lock (Server.Clients)
+                        {
+                            client = Server.Clients.FirstOrDefault(x => x.Profile?.Nickname == nickname);
+                            client.ResyncProfie();
+                        }
 
                         return $"Player with nickname '{profile.Nickname}' was given all shop items.";
                     }
