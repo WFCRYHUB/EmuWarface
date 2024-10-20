@@ -118,7 +118,7 @@ namespace EmuWarface.Game.Notifications
         {
             return new Notification
             {
-                Id                      = (ulong)row["id"],
+                Id                      = Convert.ToUInt64(row["id"]),
                 ExpirationTimeUtc       = (long)row["expiration_time_utc"],
                 Type                    = (NotificationType)row["type"],
                 Element                 = Xml.Parse((string)row["data"]),

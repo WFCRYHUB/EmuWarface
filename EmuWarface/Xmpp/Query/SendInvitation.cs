@@ -82,7 +82,7 @@ namespace EmuWarface.Xmpp.Query
                         //TODO
                         var db = SQL.QueryRead($"SELECT * FROM emu_clan_members WHERE profile_id={client.ProfileId}");
                         ClanRole clan_role = (ClanRole)db.Rows[0]["clan_role"];
-                        ulong clan_id = (ulong)db.Rows[0]["clan_id"];
+                        ulong clan_id = Convert.ToUInt64(db.Rows[0]["clan_id"]);
 
                         if (clan_role == ClanRole.Regular)
                             throw new QueryException(InviteStatus.NoPermission);

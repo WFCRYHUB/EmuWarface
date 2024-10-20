@@ -510,7 +510,7 @@ namespace EmuWarface.Game
                 if (res2 == null)
                     throw new QueryException(CreateProfileError.ReservedNickname);
 
-                profile_id = (ulong)res2.Rows[0][0];
+                profile_id = Convert.ToUInt64(res2.Rows[0][0]);
             }
             catch
             {
@@ -610,7 +610,7 @@ namespace EmuWarface.Game
         {
             DataTable dt = SQL.QueryRead($"SELECT profile_id FROM emu_profiles WHERE user_id={user_id}");
 
-            return dt.Rows.Count == 1 ? (ulong)dt.Rows[0]["profile_id"] : 0;
+            return dt.Rows.Count == 1 ? ulong.Parse(dt.Rows[0]["profile_id"].ToString()) : 0;
         }
 
         public static ulong GetProfileIdForNickname(string nickname)
@@ -622,7 +622,7 @@ namespace EmuWarface.Game
 
             DataTable dt = SQL.QueryRead(cmd);
 
-            return dt.Rows.Count == 1 ? (ulong)dt.Rows[0]["profile_id"] : 0;
+            return dt.Rows.Count == 1 ? Convert.ToUInt64(dt.Rows[0]["profile_id"]) : 0;
         }
 
         public static long GetLastSeenDate(ulong profile_id)
@@ -723,13 +723,13 @@ namespace EmuWarface.Game
             if (db.Rows.Count == 0)
                 return 0;
 
-            return (ulong)db.Rows[0]["user_id"];
+            return Convert.ToUInt64(db.Rows[0]["user_id"]);
         }
 
 
         public static Profile GetProfileWithUserId(ulong user_id)
         {
-            var db = SQL.QueryRead($"SELECT * FROM emu_profiles WHERE user_id={user_id}");
+            var db = SQL.QueryRead($"SELECT * FROM emu_profiles WHERE user_id={user_id};");
 
             /*lock (Server.Clients)
             {
@@ -842,23 +842,24 @@ namespace EmuWarface.Game
 
         private static Profile ParseDataRow(DataRow row)
         {
-            return new Profile
-            {
-                Id                      = (ulong)row["profile_id"],
-                Nickname                = (string)row["nickname"],
-                Head                    = (string)row["head"],
-                Height                  = (int)row["height"],
-                Fatness                 = (int)row["fatness"],
-                Experience              = (int)row["experience"],
-                GameMoney               = (int)row["game_money"],
-                CrownMoney              = (int)row["crown_money"],
-                CryMoney                = (int)row["cry_money"],
-                BannerBadge             = (uint)row["banner_badge"],
-                BannerMark              = (uint)row["banner_mark"],
-                BannerStripe            = (uint)row["banner_stripe"],
-                CurrentClass            = (ClassId)(int)row["current_class"],
-                IsExperienceFreezed     = (byte)row["exp_freezed"] == 1,
-            };
+            var profile = new Profile();
+           
+            profile.Id = Convert.ToUInt64(row["profile_id"]);
+            profile.Nickname = (string)row["nickname"];
+            profile.Head = (string)row["head"];
+            profile.Height = (int)row["height"];
+            profile.Fatness = (int)row["fatness"];
+            profile.Experience = (int)row["experience"];
+            profile.GameMoney = (int)row["game_money"];
+            profile.CrownMoney = (int)row["crown_money"];
+            profile.CryMoney = (int)row["cry_money"];
+            profile.BannerBadge = (uint)row["banner_badge"];
+            profile.BannerMark = (uint)row["banner_mark"];
+            profile.BannerStripe = (uint)row["banner_stripe"];
+            profile.CurrentClass = (ClassId)(int)row["current_class"];
+            profile.IsExperienceFreezed = (byte)row["exp_freezed"] == 1;
+            return profile;
+            
         }
     }
 }

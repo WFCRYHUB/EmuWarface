@@ -52,7 +52,7 @@ namespace EmuWarface.Xmpp.Query
             try
             {
                 var db_clan = SQL.QueryRead(cmd);
-                clan_id = (ulong)db_clan.Rows[0][0];
+                clan_id = Convert.ToUInt64(db_clan.Rows[0][0]);
             }
             catch (Exception e)
             {

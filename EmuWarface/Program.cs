@@ -23,13 +23,13 @@ namespace EmuWarface
             Shop.Init();
             Server.Init();
             Clan.GenerateClanList();
-
             Thread.Sleep(-1);
         }
 
         private static void UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            Log.Error(e.ExceptionObject.ToString());
+            var ex = e.ExceptionObject as Exception;
+            Log.Error(ex.ToString());
             Environment.Exit(1);
         }
     }

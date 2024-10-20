@@ -99,6 +99,7 @@ namespace EmuWarface.Core
 
         public static DataTable QueryRead(string command)
         {
+            
             using (MySqlCommand cmd = new MySqlCommand(command))
             {
                 return QueryRead(cmd);
@@ -127,7 +128,6 @@ namespace EmuWarface.Core
                     connection.Open();
 
                     command.Connection = connection;
-
                     MySqlDataReader reader = command.ExecuteReader();
                     DataTable result = new DataTable();
                     result.Load(reader);

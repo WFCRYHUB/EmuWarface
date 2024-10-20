@@ -128,7 +128,7 @@ namespace EmuWarface.Game
         {
             return new Achievement
             {
-                ProfileId                   = (ulong)row["profile_id"],
+                ProfileId                   = Convert.ToUInt64(row["profile_id"]),
                 AchievementId               = (uint)row["achievement_id"],
                 Progress                    = (int)row["progress"],
                 CompletionTimeUnixTimestamp = (long)row["completion_time"],

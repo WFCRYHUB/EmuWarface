@@ -22,7 +22,7 @@ namespace EmuWarface.Xmpp.Query
             var db = SQL.QueryRead($"SELECT * FROM emu_clan_members WHERE profile_id={client.ProfileId}");
             if (db.Rows.Count != 1) throw new QueryException(1);
 
-            ulong clan_id = (ulong)db.Rows[0]["clan_id"];
+            ulong clan_id = Convert.ToUInt64(db.Rows[0]["clan_id"]);
             SQL.Query($"DELETE FROM emu_clan_members WHERE profile_id={client.ProfileId}");
 
             Clan.ClanInfo(client);
@@ -47,7 +47,7 @@ namespace EmuWarface.Xmpp.Query
 
             if ((ClanRole)db.Rows[0]["clan_role"] == ClanRole.Master)
             {
-                ulong new_master_id = (ulong)db_clan_members.Rows[0]["profile_id"];
+                ulong new_master_id = Convert.ToUInt64(db_clan_members.Rows[0]["profile_id"]);
                 SQL.Query($"UPDATE emu_clan_members SET clan_role=1 WHERE clan_id={clan_id} AND profile_id={new_master_id}");
 
                 Clan.ClanMembersUpdated(clan_id, new_master_id);

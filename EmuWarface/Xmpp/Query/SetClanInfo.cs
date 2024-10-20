@@ -20,7 +20,7 @@ namespace EmuWarface.Xmpp.Query
             if (db.Rows.Count == 0)
                 throw new QueryException(1);
 
-            ulong clan_id = (ulong)db.Rows[0]["clan_id"];
+            ulong clan_id = Convert.ToUInt64(db.Rows[0]["clan_id"]);
             ClanRole clan_role = (ClanRole)db.Rows[0]["clan_role"];
 
             if (clan_id == 0 || clan_role != ClanRole.Master)

@@ -18,7 +18,6 @@ using System.Security.Authentication;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
-using static Zstandard.Net.ZstandardInterop;
 
 namespace EmuWarface.Core
 {
