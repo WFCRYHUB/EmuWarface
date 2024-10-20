@@ -26,7 +26,7 @@ namespace EmuWarface.Xmpp.Query
 
                 XmlElement clan = Xml.Element("clan")
                     .Attr("name", db_clan["name"])
-                    .Attr("master", Clan.GetClanLeader((ulong)db_clan["clan_id"]))
+                    .Attr("master", Clan.GetClanLeader(Convert.ToUInt64(db_clan["clan_id"])))
                     .Attr("clan_points", top_clan.Value)
                     .Attr("members", db_members.Rows.Count);
 

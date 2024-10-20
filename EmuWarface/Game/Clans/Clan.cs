@@ -42,7 +42,7 @@ namespace EmuWarface.Game.Clans
 
             foreach (DataRow row_member in db_clan_members.Rows)
             {
-                ulong clan_id       = (ulong)row_member["clan_id"];
+                ulong clan_id       = Convert.ToUInt64(row_member["clan_id"]);
                 int member_points   = (int)row_member["clan_points"];
 
                 if (!list.ContainsKey(clan_id))
@@ -69,7 +69,7 @@ namespace EmuWarface.Game.Clans
             if (db.Rows.Count != 1)
                 return 0;
 
-            return (ulong)db.Rows[0]["clan_id"];
+            return Convert.ToUInt64(db.Rows[0]["clan_id"]);
         }
 
         public static string GetClanName(ulong clan_id)
@@ -91,7 +91,7 @@ namespace EmuWarface.Game.Clans
             var db = SQL.QueryRead($"SELECT * FROM emu_clan_members WHERE clan_id={clan_id}");
             foreach (DataRow row in db.Rows)
             {
-                var profile_id = (ulong)row["profile_id"];
+                var profile_id = Convert.ToUInt64(row["profile_id"]);
                 lock (Server.Clients)
                 {
                     var member = Server.Clients.FirstOrDefault(x => x.ProfileId == profile_id);
@@ -185,7 +185,7 @@ namespace EmuWarface.Game.Clans
 
             if (db.Rows.Count == 1)
             {
-                var profile_id = (ulong)db.Rows[0]["profile_id"];
+                var profile_id = Convert.ToUInt64(db.Rows[0]["profile_id"]);
                 return Profile.GetNickname(profile_id);
             }
 
@@ -278,8 +278,8 @@ namespace EmuWarface.Game.Clans
                     .Attr("clan_points", db_clan_member["clan_points"])
                     .Attr("invite_date", db_clan_member["invite_date"])
                     .Attr("clan_role", db_clan_member["clan_role"])
-                    .Attr("jid",    Profile.GetOnlineId((ulong)db_clan_member["profile_id"]))
-                    .Attr("status", (int)Profile.GetOnlineStatus((ulong)db_clan_member["profile_id"]));
+                    .Attr("jid",    Profile.GetOnlineId(Convert.ToUInt64(db_clan_member["profile_id"])))
+                    .Attr("status", (int)Profile.GetOnlineStatus(Convert.ToUInt64(db_clan_member["profile_id"])));
 
                 if ((ClanRole)db_clan_member["clan_role"] == ClanRole.Master)
                 {

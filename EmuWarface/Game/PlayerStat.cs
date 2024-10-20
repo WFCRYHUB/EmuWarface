@@ -140,7 +140,7 @@ namespace EmuWarface.Game
             cmd.Parameters.AddWithValue("@difficulty", Difficulty != null ? (object)Difficulty : DBNull.Value);
             cmd.Parameters.AddWithValue("@item_type", ItemType != null ? (object)ItemType : DBNull.Value);
 
-            Id = (ulong)SQL.QueryRead(cmd).Rows[0][0];
+            Id = Convert.ToUInt64(SQL.QueryRead(cmd).Rows[0][0]);
         }
 
         public void Update()
@@ -165,9 +165,9 @@ namespace EmuWarface.Game
         {
             return new PlayerStat
             {
-                Id          = (ulong)row["id"],
-                ProfileId   = (ulong)row["profile_id"],
-                Value       = (ulong)row["value"],
+                Id          = Convert.ToUInt64(row["id"]),
+                ProfileId   = Convert.ToUInt64(row["profile_id"]),
+                Value       = Convert.ToUInt64(row["value"]),
                 Stat        = (string)row["stat"],
                 Difficulty  = row["difficulty"] != DBNull.Value ? (string)row["difficulty"] : null,
                 ItemType    = row["item_type"] != DBNull.Value ? (string)row["item_type"] : null,

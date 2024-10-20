@@ -21,7 +21,7 @@ namespace EmuWarface.Xmpp.Query
                 throw new QueryException(1);
 
             ulong target_id = ulong.Parse(iq.Query.GetAttribute("profile_id"));
-            ulong clan_id = (ulong)db.Rows[0]["clan_id"];
+            ulong clan_id = Convert.ToUInt64(db.Rows[0]["clan_id"]);
 
             var db_clan_members = SQL.QueryRead($"SELECT * FROM emu_clan_members WHERE clan_id={clan_id} AND profile_id={target_id}");
             if (db_clan_members.Rows.Count != 1)

@@ -313,7 +313,7 @@ namespace EmuWarface.Game.Items
             cmd.Parameters.AddWithValue("@quantity",                _quantity);
             cmd.Parameters.AddWithValue("@type",                    (int)Type);
 
-            Id = (ulong)SQL.QueryRead(cmd).Rows[0][0];
+            Id = Convert.ToUInt64(SQL.QueryRead(cmd).Rows[0][0]);
             ProfileId = profile_id;
         }
 
@@ -537,8 +537,8 @@ namespace EmuWarface.Game.Items
         {
             return new Item
             {
-                ProfileId               = (ulong)row["profile_id"],
-                Id                      = (ulong)row["id"],
+                ProfileId               = Convert.ToUInt64(row["profile_id"]),
+                Id                      = Convert.ToUInt64(row["id"]),
                 Name                    = (string)row["name"],
                 Config                  = (string)row["config"],
                 AttachedTo              = (byte)row["attached_to"],

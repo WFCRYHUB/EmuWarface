@@ -38,7 +38,7 @@ namespace EmuWarface.Game
             var result = SQL.QueryRead($"SELECT * FROM emu_friends WHERE first_id={profile_id}").Rows;
             foreach (DataRow row in result)
             {
-                friends.Add((ulong)row["second_id"]);
+                friends.Add(Convert.ToUInt64(row["second_id"]));
             }
 
             return friends;
